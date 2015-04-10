@@ -91,6 +91,7 @@
     <Compile Include="Controllers\AuthInfo.cs" />
     <Compile Include="Controllers\AuthWorker.cs" />
     <Compile Include="Controllers\BasicApiWorker.cs" />
+    <Compile Include="Controllers\DataFile.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\Options.cs" />
     <Compile Include="Controllers\TokenInfo.cs" />

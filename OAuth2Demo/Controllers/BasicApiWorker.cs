@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using RestSharp;
 
 namespace OAuth2Demo.Controllers
@@ -30,9 +31,11 @@ namespace OAuth2Demo.Controllers
                                       token.access_token)
                               };
             var _restRequest = new RestRequest("DataFileList", Method.GET);
+            _restRequest.AddQueryParameter("all", "true");
             var _restResponse = _restClient.Execute(_restRequest);
             var _content = _restResponse.Content;
-            return new List<string>{"First", "Second"};
+            var _list = SimpleJson.DeserializeObject<DataFile[]>(_content);
+            return _list.Select(file => file.Name).ToList();
         }
     }
 }
