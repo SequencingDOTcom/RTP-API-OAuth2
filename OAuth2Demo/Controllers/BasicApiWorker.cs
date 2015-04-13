@@ -19,7 +19,7 @@ namespace OAuth2Demo.Controllers
         }
 
         /// <summary>
-        /// Returns list of users available files
+        /// Returns list of users available files. Limits to first 50 files.
         /// </summary>
         /// <returns></returns>
         public List<string> ListFiles()
@@ -35,7 +35,7 @@ namespace OAuth2Demo.Controllers
             var _restResponse = _restClient.Execute(_restRequest);
             var _content = _restResponse.Content;
             var _list = SimpleJson.DeserializeObject<DataFile[]>(_content);
-            return _list.Select(file => file.Name).ToList();
+            return _list.Select(file => file.Name).Take(50).ToList();
         }
     }
 }

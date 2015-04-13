@@ -27,7 +27,44 @@ namespace OAuth2Demo.Controllers
 
         public AuthInfo RefreshToken(string refreshToken)
         {
-            return null;
+            var _webRequest = CreateRq();
+            try
+            {
+                using (var _str = _webRequest.GetRequestStream())
+                using (var _sw = new StreamWriter(_str))
+                {
+                    _sw.Write("grant_type={0}&refresh_token={1}", "refresh_token", refreshToken);
+                    _sw.Flush();
+                }
+                var _webResponse = _webRequest.GetResponse();
+                using (var _stream = _webResponse.GetResponseStream())
+                using (var _sr = new StreamReader(_stream))
+                {
+                    var _readToEnd = _sr.ReadToEnd();
+                    var _res = SimpleJson.DeserializeObject<TokenInfo>(_readToEnd);
+                    return new AuthInfo { Success = true, Token = _res };
+                }
+            }
+            catch (WebException _ex)
+            {
+                using (var _rs = _ex.Response.GetResponseStream())
+                using (var _sr = new StreamReader(_rs))
+                {
+                    var _readToEnd = _sr.ReadToEnd();
+                    return new AuthInfo { Success = false, ErrorMessage = "Error while refreshing token, HTTP:" + _ex.Status + ":" + _readToEnd };
+                }
+            }
+        }
+
+        private HttpWebRequest CreateRq()
+        {
+            var _webRequest = (HttpWebRequest) WebRequest.Create(oAuthUrl + "?q=oauth2/token");
+            _webRequest.Method = "POST";
+            _webRequest.Headers.Add("Authorization",
+                "Basic " + Convert.ToBase64String(ASCIIEncoding.ASCII.GetBytes(appId + ":" + secret)));
+            _webRequest.ContentType = "application/x-www-form-urlencoded";
+            _webRequest.UserAgent = "OAUTH-DEMO-APP";
+            return _webRequest;
         }
 
         /// <summary>
@@ -37,11 +74,7 @@ namespace OAuth2Demo.Controllers
         /// <returns>AuthInfo object which represents the final result of authorization</returns>
         public AuthInfo GetAuthInfo(string code)
         {
-            var _webRequest = (HttpWebRequest)WebRequest.Create(oAuthUrl + "?q=oauth2/token");
-            _webRequest.Method = "POST";
-            _webRequest.Headers.Add("Authorization", "Basic " + Convert.ToBase64String(ASCIIEncoding.ASCII.GetBytes(appId + ":" + secret)));
-            _webRequest.ContentType = "application/x-www-form-urlencoded";
-            _webRequest.UserAgent = "OAUTH-DEMO-APP";
+            var _webRequest = CreateRq();
             try
             {
                 using (var _str = _webRequest.GetRequestStream())
