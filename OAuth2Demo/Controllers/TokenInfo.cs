@@ -1,5 +1,8 @@
 ﻿namespace OAuth2Demo.Controllers
 {
+    /// <summary>
+    /// TokenInfo is a data structure holding all authentication related properties
+    /// </summary>
     public class TokenInfo
     {
         public string access_token { get; set; }

@@ -25,6 +25,11 @@ namespace OAuth2Demo.Controllers
             this.appId = appId;
         }
 
+        /// <summary>
+        /// RefreshToken method performs authtoken refresh through previously acquired refreshToken
+        /// </summary>
+        /// <param name="refreshToken"></param>
+        /// <returns></returns>
         public AuthInfo RefreshToken(string refreshToken)
         {
             var _webRequest = CreateRq();
