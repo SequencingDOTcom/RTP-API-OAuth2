@@ -1,6 +1,6 @@
 oAuth2 demo for coding Real-Time Personalization into your apps
 =========================================
-This repo contains a demo of [Sequencing.com's](https://www.sequencing.com/) oAuth2 system for developing apps with Real-Time Personalization (RTP) technology. This code is opensource and free to use, share, build upon and improve.
+This repo contains a demo of [Sequencing.com's](https://sequencing.com/) oAuth2 system for developing apps with Real-Time Personalization (RTP) technology. This code is opensource and free to use, share, build upon and improve.
 
 This repository contains the demo in the following languages:
 
@@ -28,7 +28,7 @@ This demo provides overview of coding with oAuth2 when integrating Real-Time Per
 
 An end-user validates using thier Sequencing.com login and, if successfull, the demo will provide a list of files for the user to select from.
 
-To code Real-Time Personalization technology into apps, developers may [register for a free account](https://www.sequencing.com/user/register) at Sequencing.com. App development with RTP is always free.
+To code Real-Time Personalization technology into apps, developers may [register for a free account](https://sequencing.com/user/register/) at Sequencing.com. App development with RTP is always free.
 
 Installation
 ======================================
@@ -44,14 +44,14 @@ The app should work straight away without any issue.
 
 Other tips
 
-* To experience the entire demo, [register for a free account](https://www.sequencing.com/user/register) and use your account credentials when running the demo. You may then access all developer tools and information directly from the [Developer Center](https://sequencing.com/developer-center).
-* [Developer Documentation](https://sequencing.com/developer-documentation) is also available.
-* Making sure you are connected to the internet since the API calls will be made to our server.
-* Making sure that you have the latest version of the code from this repository.
+* To experience the entire demo, [register for a free account](https://sequencing.com/user/register/) and use your account credentials when running the demo. You may then access all developer tools and information directly from the [Developer Center](https://sequencing.com/developer-center/).
+* [Developer Documentation](https://sequencing.com/developer-documentation/) is also available.
+* Confirm you are connected to the internet since the API calls will be made to our server.
+* Confirm you have the latest version of the code from this repository.
 
 Maintainers
 ======================================
-The codebase is actively maintained by [Sequencing.com](https://www.sequencing.com/). Please email the Sequencing.com bioinformatics team at gittaca@sequencing.com if you require any more information or just to say hola.
+The codebase is actively maintained by [Sequencing.com](https://sequencing.com/). Please email the Sequencing.com bioinformatics team at gittaca@sequencing.com if you require any more information or just to say hola.
 
 Contribute
 ======================================
