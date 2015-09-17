@@ -1,7 +1,7 @@
-# oAuth2-code-examples
-This project contains examples of using Sequencing.com's oAuth2 system when you develop apps with Real-Time Personalization technology.
+# oAuth2-demo
+This repo contains a demo of Sequencing.com's oAuth2 system for developing apps with Real-Time Personalization technology.
 
-oAuth2 examples are available in the following languages:
+oAuth2 demos are available in the following languages:
 Python
 Perl
 .NET/C#
