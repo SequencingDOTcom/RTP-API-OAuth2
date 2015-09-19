@@ -30,12 +30,12 @@ namespace OAuth2Demo.Controllers
                                       new OAuth2AuthorizationRequestHeaderAuthenticator(
                                       token.access_token)
                               };
-            var _restRequest = new RestRequest("DataFileList", Method.GET);
-            _restRequest.AddQueryParameter("all", "true");
+            var _restRequest = new RestRequest("DataSourceList", Method.GET);
+            _restRequest.AddQueryParameter("sample", "true");
             var _restResponse = _restClient.Execute(_restRequest);
             var _content = _restResponse.Content;
             var _list = SimpleJson.DeserializeObject<DataFile[]>(_content);
-            return _list.Select(file => file.Name).Take(50).ToList();
+            return _list.Select(file => file.Name+":"+file.FriendlyDesc1+","+file.FriendlyDesc2).Take(50).ToList();
         }
     }
 }
