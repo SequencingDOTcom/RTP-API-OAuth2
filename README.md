@@ -2,6 +2,8 @@ oAuth2 demo for coding Real-Time Personalization into your apps
 =========================================
 This repo contains a demo of [Sequencing.com's](https://sequencing.com/) oAuth2 system for developing apps with Real-Time Personalization (RTP) technology. This code is opensource and free to use, share, build upon and improve.
 
+The oAuth2 Demo can be accessed here: https://oauth-example.sequencing.com/
+
 This repository contains the demo in the following languages:
 
 * Python
