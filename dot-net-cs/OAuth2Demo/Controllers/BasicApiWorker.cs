@@ -35,7 +35,7 @@ namespace OAuth2Demo.Controllers
             var _restResponse = _restClient.Execute(_restRequest);
             var _content = _restResponse.Content;
             var _list = SimpleJson.DeserializeObject<DataFile[]>(_content);
-            return _list.Select(file => file.Name+":"+file.FriendlyDesc1+","+file.FriendlyDesc2).Take(50).ToList();
+            return _list.Select(file => file.Name+": "+file.FriendlyDesc1+", "+file.FriendlyDesc2).Take(50).ToList();
         }
     }
 }
