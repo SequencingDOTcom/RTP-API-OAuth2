@@ -56,7 +56,7 @@ Once oAuth2 authentication is implemented, select one or more [app chains](https
  * the documentation for each app chain provides a list of all possible API responses. The response for most app chains are simply 'Yes' or 'No'.
 
 Example
-* App Chain: This person likely needs to apply sunscreen with SPF +30 whenever it is sunny or even partly sunny.
+* App Chain: It is very important for this person's health to apply sunscreen with SPF +30 whenever it is sunny or even partly sunny.
 * Possible responses: Yes, No, Insufficient Data, Error
 
 Resources
