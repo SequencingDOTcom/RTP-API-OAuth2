@@ -1,6 +1,6 @@
 oAuth2 code for Sequencing.com's API and App Chains
 =========================================
-This repo contains code for implementing [Sequencing.com's](https://sequencing.com/) oAuth2 authentication for your app. 
+This repo contains code for implementing oAuth2 authentication for your app so that your app can securely access [Sequencing.com's](https://sequencing.com/) API and app chains. 
 
 Want to see it in action? A demo of the oAuth2 code is available here: https://oauth-demo.sequencing.com/
 
