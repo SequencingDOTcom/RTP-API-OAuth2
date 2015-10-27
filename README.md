@@ -50,10 +50,10 @@ Each app chain is composed of
 * an **API request** to Sequencing.com
  * this request is secured using oAuth2
 * analysis of the app user's genes
- * each app chain analyzes a specific trait or condition. 
- * there are thousands of app chains to choose from.
+ * each app chain analyzes a specific trait or condition
+ * there are thousands of app chains to choose from
  * all analysis occurs in real-time at Sequencing.com
-* an **API response** to your app. 
+* an **API response** to your app
  * the information provided by the response allows your app to tailor itself to the app user based on the user's genes.
  * the documentation for each app chain provides a list of all possible API responses. The response for most app chains are simply 'Yes' or 'No'.
 
