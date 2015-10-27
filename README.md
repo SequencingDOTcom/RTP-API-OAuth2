@@ -44,7 +44,9 @@ To implement oAuth2 authentication for your app:
 
 3) [Generate an oAuth2 secret](https://sequencing.com/api-secret-generator) and insert the secret into the oAuth2 code
 
-Once oAuth2 authentication is implemented, select one or more [app chains](https://sequencing.com/app-chains) that will provide information you can use to personalize your app. personalize your app. Each app chain is composed of 
+Once oAuth2 authentication is implemented, select one or more [app chains](https://sequencing.com/app-chains) that will provide information you can use to personalize your app.
+
+Each app chain is composed of 
 * an **API request** to Sequencing.com
  * this request is secured using oAuth2
 * analysis of the app user's genes
