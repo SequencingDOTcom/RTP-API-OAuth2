@@ -1,0 +1,31 @@
+from django.shortcuts import render, redirect
+from django.core.urlresolvers import reverse
+from django.http import HttpResponseRedirect
+import http.client, urllib.parse
+from .appconfig import AppConfig
+from base64 import b64encode
+
+def auth(request):
+    params = urllib.parse.urlencode({'redirect_uri': AppConfig.redirect_uri, 'response_type': AppConfig.response_type, 'state': AppConfig.state, 'client_id': AppConfig.client_id, 'scope': AppConfig.scope})
+
+    return redirect(AppConfig.oauthserver_uri + '/authorize?' + params, {})
+
+def authCallback(request):
+    state = request.GET['state']
+    code = request.GET['code']
+
+    #url = reverse('api')
+    #return HttpResponseRedirect(url)
+    
+    if state == AppConfig.state:
+        c = http.client.HTTPSConnection("sequencing.com")
+        userAndPass = b64encode(b"%:%" % (AppConfig.client_id, AppConfig.client_secret)).decode("ascii")        
+        headers = { 'Authorization' : 'Basic %s' % userAndPass } 
+        params = urllib.parse.urlencode({'@grant_type': AppConfig.grant_type, '@code': code, '@redirect_uri': AppConfig.redirect_uri})
+        #c.request('POST', '/oauth2/token', headers=headers, params)
+        #response = c.getresponse()
+
+    return render(request, 'api.html', {'state': state})
+
+def api(request):
+    return render(request, 'api.html', {})

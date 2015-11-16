@@ -1,0 +1,54 @@
+<web-app version="3.0">
+	<display-name>oAuth2 Demo</display-name>
+  
+	<servlet>
+		<servlet-name>authServlet</servlet-name>
+		<servlet-class>com.sequencing.oauth2demo.servlet.AuthServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>authCallbackServlet</servlet-name>
+		<servlet-class>com.sequencing.oauth2demo.servlet.AuthCallbackServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>apiServlet</servlet-name>
+		<servlet-class>com.sequencing.oauth2demo.servlet.ApiServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>apiResponse</servlet-name>
+		<jsp-file>/templates/apiResponse.jsp</jsp-file>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>error</servlet-name>
+		<jsp-file>/templates/error.jsp</jsp-file>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>authServlet</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>authCallbackServlet</servlet-name>
+		<url-pattern>/Default/Authcallback</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>apiServlet</servlet-name>
+		<url-pattern>/authorization-approved</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>apiResponse</servlet-name>
+		<url-pattern>/apiResponse</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>error</servlet-name>
+		<url-pattern>/error</url-pattern>
+	</servlet-mapping>
+
+</web-app>
