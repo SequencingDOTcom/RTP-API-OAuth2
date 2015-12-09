@@ -67,7 +67,8 @@ Authentication flow
 
 Sequencing.com uses standard OAuth approach which enables applications to obtain limited access to user accounts on an HTTP service from 3rd party applications without exposing the user's password. OAuth acts as an intermediary on behalf of the end user, providing the service with an access token that authorizes specific account information to be shared.
 
-![sequence diagram](https://github.com/SequencingDOTcom/oAuth2-code-and-demo/blob/master/screenshots/oauth_activity.png)
+![Authentication sequence diagram]
+(https://github.com/SequencingDOTcom/oAuth2-code-and-demo/blob/master/screenshots/oauth_activity.png)
 
 
 ## Steps
@@ -76,7 +77,9 @@ Sequencing.com uses standard OAuth approach which enables applications to obtain
 
 First, the user is given an authorization code link that looks like the following:
 
-```https://sequencing.com/oauth2/authorize?redirect_uri=REDIRECT_URL&response_type=code&state=STATE&client_id=CLIENT_ID&scope=SCOPES```
+```
+https://sequencing.com/oauth2/authorize?redirect_uri=REDIRECT_URL&response_type=code&state=STATE&client_id=CLIENT_ID&scope=SCOPES
+```
 
 Here is an explanation of the link components:
 
