@@ -101,13 +101,17 @@ When the user clicks the link, they must first log in to the service, to authent
 
 If the user clicks "Authorize Application", the service redirects the user-agent to the application redirect URI, which was specified during the client registration, along with an authorization code. The redirect would look something like this (assuming the application is "php-oauth-demo.sequencing.com"):
 
-```https://php-oauth-demo.sequencing.com/index.php?code=AUTHORIZATION_CODE```
+```
+https://php-oauth-demo.sequencing.com/index.php?code=AUTHORIZATION_CODE
+```
 
 ### Step 4: Application Requests Access Token
 
 The application requests an access token from the API, by passing the authorization code along with authentication details, including the client secret, to the API token endpoint. Here is an example POST request to Sequencing.com token endpoint:
 
-```https://sequencing.com/oauth2/token```
+```
+https://sequencing.com/oauth2/token
+```
 
 Following POST parameters have to be sent
 
