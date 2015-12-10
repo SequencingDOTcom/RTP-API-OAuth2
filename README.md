@@ -18,9 +18,9 @@ oAuth2 code is available in the following languages:
 Contents
 =========================================
 * Introduction
-* Installation
-* Configuration
-* Troubleshooting
+* Implementation
+* Authentication flow
+* Resources
 * Maintainers
 * Contribute
 
