@@ -20,6 +20,7 @@ Contents
 * Introduction
 * Implementation
 * Authentication flow
+* Steps
 * Resources
 * Maintainers
 * Contribute
