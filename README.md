@@ -6,14 +6,14 @@ Want to see it in action? A demo of the oAuth2 code is available here: https://o
 
 oAuth2 code is available in the following languages:
 
-* Python
 * Perl
-* .NET/C#
-* Java
-* Java-Android
+* Python
 * Swift
 * Objective-C
-
+* Java (Servlet)
+* Java (Spring)
+* Java (Android)
+* .NET/C#
 
 Contents
 =========================================
