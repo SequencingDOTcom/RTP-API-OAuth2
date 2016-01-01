@@ -6,14 +6,15 @@ Want to see it in action? A demo of the oAuth2 code is available here: https://o
 
 oAuth2 code is available in the following languages:
 
-* Perl
-* Python
 * Swift
-* Objective-C
-* Java (Servlet)
-* Java (Spring)
-* Java (Android)
-* .NET/C#
+* [Objective-C](https://github.com/SequencingDOTcom/oAuth2-code-and-demo/tree/master/objective-c)
+* [Android](https://github.com/SequencingDOTcom/oAuth2-code-and-demo/tree/master/android)
+* [PHP](https://github.com/SequencingDOTcom/oAuth2-code-and-demo/tree/master/php)
+* [Perl](https://github.com/SequencingDOTcom/oAuth2-code-and-demo/tree/master/perl)
+* [Python (Django)](https://github.com/SequencingDOTcom/oAuth2-code-and-demo/tree/master/python-django)
+* [Java (Servlet)](https://github.com/SequencingDOTcom/oAuth2-code-and-demo/tree/master/java-servlet)
+* [Java (Spring)](https://github.com/SequencingDOTcom/oAuth2-code-and-demo/tree/master/java-spring)
+* [.NET/C#](https://github.com/SequencingDOTcom/oAuth2-code-and-demo/tree/master/dot-net-cs)
 
 Contents
 =========================================
