@@ -4,7 +4,7 @@ This repo contains code for implementing oAuth2 authentication for your app so t
 
 Want to see it in action? A demo of the oAuth2 code is available here: https://oauth-demo.sequencing.com/
 
-oAuth2 code is available in the following languages:
+oAuth2 code is available in the following languages: 
 
 * [Swift](https://github.com/SequencingDOTcom/oAuth2-code-and-demo/tree/master/swift)
 * [Objective-C](https://github.com/SequencingDOTcom/oAuth2-code-and-demo/tree/master/objective-c)
