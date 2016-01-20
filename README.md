@@ -7,7 +7,8 @@ Want to see it in action? A demo of the oAuth2 code is available here: https://o
 oAuth2 code is available in the following languages: 
 
 * [Swift](https://github.com/SequencingDOTcom/oAuth2-code-and-demo/tree/master/swift)
-* [Objective-C](https://github.com/SequencingDOTcom/oAuth2-code-and-demo/tree/master/objective-c)
+* [Objective-C - code](https://github.com/SequencingDOTcom/oAuth2-code-and-demo/tree/master/objective-c)
+* [Objective-C - CocoaPods module](https://github.com/SequencingDOTcom/CocoaPods-module-for-OAuth2-and-File-Selector)
 * [Android](https://github.com/SequencingDOTcom/oAuth2-code-and-demo/tree/master/android)
 * [PHP](https://github.com/SequencingDOTcom/oAuth2-code-and-demo/tree/master/php)
 * [Perl](https://github.com/SequencingDOTcom/oAuth2-code-and-demo/tree/master/perl)
