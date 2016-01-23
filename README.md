@@ -24,6 +24,7 @@ Contents
 * Authentication flow
 * Steps
 * Resources
+* App chains
 * Maintainers
 * Contribute
 
@@ -132,6 +133,27 @@ Resources
 * [File selector code](https://github.com/SequencingDOTcom/File-Selector-code)
 * [Developer center](https://sequencing.com/developer-center)
 * [Developer Documentation](https://sequencing.com/developer-documentation/)
+
+App chains
+======================================
+Search and find app chains -> https://sequencing.com/app-chains/
+
+Each app chain is composed of 
+* an **API request** to Sequencing.com
+ * this request is secured using oAuth2
+* analysis of the app user's genes
+ * each app chain analyzes a specific trait or condition
+ * there are thousands of app chains to choose from
+ * all analysis occurs in real-time at Sequencing.com
+* an **API response** to your app
+ * the information provided by the response allows your app to tailor itself to the app user based on the user's genes.
+ * the documentation for each app chain provides a list of all possible API responses. The response for most app chains are simply 'Yes' or 'No'.
+
+Example
+* App Chain: It is very important for this person's health to apply sunscreen with SPF +30 whenever it is sunny or even partly sunny.
+* Possible responses: Yes, No, Insufficient Data, Error
+
+While there are already app chains to personalize most apps, if you need something but don't see an app chain for it, tell us! (ie email us: gittaca@sequencing.com).
 
 Maintainers
 ======================================
