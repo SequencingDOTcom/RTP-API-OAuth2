@@ -1,14 +1,16 @@
-oAuth2 code for Sequencing.com's API and App Chains
+OAuth2 code for Sequencing.com's API and App Chains
 =========================================
-This repo contains code for implementing oAuth2 authentication for your app so that your app can securely access [Sequencing.com's](https://sequencing.com/) API and app chains. 
+This repo contains code for implementing OAuth2 authentication for your app so that your app can securely access [Sequencing.com's](https://sequencing.com/) API and app chains. 
 
-Want to see it in action? A demo of the oAuth2 code is available here: https://oauth-demo.sequencing.com/
+Want to see it in action? A demo of the OAuth2 code is available here: https://oauth-demo.sequencing.com/
 
-oAuth2 code is available in the following languages:
+OAuth2 code is available in the following languages: 
 
-* Swift
-* [Objective-C](https://github.com/SequencingDOTcom/oAuth2-code-and-demo/tree/master/objective-c)
-* [Android](https://github.com/SequencingDOTcom/oAuth2-code-and-demo/tree/master/android)
+* [Swift (code)](https://github.com/SequencingDOTcom/oAuth2-code-and-demo/tree/master/swift)
+* [Objective-C (code)](https://github.com/SequencingDOTcom/oAuth2-code-and-demo/tree/master/objective-c)
+* [Objective-C (CocoaPods plugin)](https://github.com/SequencingDOTcom/CocoaPods-module-for-OAuth2-and-File-Selector)
+* [Android (code)](https://github.com/SequencingDOTcom/oAuth2-code-and-demo/tree/master/android)
+* [Android (Maven plugin)](https://github.com/SequencingDOTcom/Maven-plugin-provides-OAuth2-and-File-Selector)
 * [PHP](https://github.com/SequencingDOTcom/oAuth2-code-and-demo/tree/master/php)
 * [Perl](https://github.com/SequencingDOTcom/oAuth2-code-and-demo/tree/master/perl)
 * [Python (Django)](https://github.com/SequencingDOTcom/oAuth2-code-and-demo/tree/master/python-django)
@@ -20,6 +22,7 @@ Contents
 =========================================
 * Introduction
 * Implementation
+* App chains
 * Authentication flow
 * Steps
 * Resources
@@ -30,7 +33,7 @@ Introduction
 =========================================
 The code in this repo can be used to quickly implement oAuth2 authentication for Sequencing.com's API. By adding oAuth2 authentication to your app, you'll then be able to use Sequencing.com's API to ehance your app with Real-Time Personalization.
 
-The code has also been deployed and can be accessed online as an [oAuth2 demo](https://oauth-demo.sequencing.com/).
+The code has also been deployed and can be accessed online as an [OAuth2 demo](https://oauth-demo.sequencing.com/).
 * A end-user validates using thier Sequencing.com login and, if successfull, the demo will provide a list of genetic data files from the user's account at Sequencing.com.
 * The demo will display a list of sample files if a user doesn't yet have access to his or her genetic data. These sample files are real genetic data files and are available for free for apps that use Sequencing.com's API.
 
@@ -44,9 +47,13 @@ To implement oAuth2 authentication for your app:
 
 2) Add [Sequencing.com's oAuth2 code](https://github.com/SequencingDOTcom/oAuth2-code-and-demo) from this repo to your app
 
-3) [Generate an oAuth2 secret](https://sequencing.com/api-secret-generator) and insert the secret into the oAuth2 code
+3) [Generate an OAuth2 secret](https://sequencing.com/api-secret-generator) and insert the secret into the OAuth2 code
 
-Once oAuth2 authentication is implemented, select one or more [app chains](https://sequencing.com/app-chains) that will provide information you can use to personalize your app.
+Once OAuth2 authentication is implemented, select one or more [app chains](https://sequencing.com/app-chains) that will provide information you can use to personalize your app.
+
+App chains
+======================================
+Search and find app chains -> https://sequencing.com/app-chains/
 
 Each app chain is composed of 
 * an **API request** to Sequencing.com
@@ -63,6 +70,7 @@ Example
 * App Chain: It is very important for this person's health to apply sunscreen with SPF +30 whenever it is sunny or even partly sunny.
 * Possible responses: Yes, No, Insufficient Data, Error
 
+While there are already app chains to personalize most apps, if you need something but don't see an app chain for it, tell us! (ie email us: gittaca@sequencing.com).
 
 Authentication flow
 ======================================

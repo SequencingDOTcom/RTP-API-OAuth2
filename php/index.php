@@ -96,9 +96,30 @@ else {
     // You are to save these 2 tokens somewhere in a permanent storage, such as
     // database. When access token expires, you will be able to use refresh
     // token to fetch a new access token without need of re-authorization by
-    // user.
+    // user. For demonstration purposes we will use refresh token to get a new
+    // access token in the following lines of code. This is not necessary and
+    // should be used when access token you have on hands has expired.
     $access_token = $response_parsed->access_token;
     $refresh_token = $response_parsed->refresh_token;
+
+    $ch = curl_init();
+    curl_setopt_array($ch, array(
+      CURLOPT_URL => $oauth2_token_uri,
+      CURLOPT_RETURNTRANSFER => TRUE,
+      CURLOPT_POST => TRUE,
+      CURLOPT_POSTFIELDS => http_build_query(array(
+        'grant_type' => 'refresh_token',
+        'refresh_token' => $refresh_token,
+      )),
+      CURLOPT_HTTPAUTH => CURLAUTH_BASIC,
+      CURLOPT_USERPWD => $client_id . ':' . $client_secret,
+    ));
+    $response = curl_exec($ch);
+    $response_parsed = json_decode($response);
+    if (!$response_parsed || isset($response_parsed->error)) {
+      exit('Error in oauth2 token refresh response: ' . $response);
+    }
+    $access_token = $response_parsed->access_token;
 
     $ch = curl_init();
     curl_setopt_array($ch, array(
