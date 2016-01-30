@@ -15,6 +15,7 @@
 		<gson.version>2.3.1</gson.version>
 		<jsp.version>2.0</jsp.version>
 		<jstl.version>1.2</jstl.version>
+		<sequencing.version>1.0</sequencing.version>
 	</properties>
 
 	<dependencies>
@@ -32,18 +33,6 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.apache.httpcomponents</groupId>
-			<artifactId>httpclient</artifactId>
-			<version>${httpclient.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.google.code.gson</groupId>
-			<artifactId>gson</artifactId>
-			<version>${gson.version}</version>
-		</dependency>
-
-		<dependency>
 			<groupId>javax.servlet.jsp</groupId>
 			<artifactId>jsp-api</artifactId>
 			<version>${jsp.version}</version>
@@ -54,6 +43,12 @@
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
 			<version>${jstl.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sequencing</groupId>
+			<artifactId>oauth2-core</artifactId>
+			<version>1.0</version>
 		</dependency>
 
 	</dependencies>
@@ -67,9 +62,9 @@
 				<configuration>
 					<url>http://localhost:8080/manager/text</url>
 					<server>TomcatServer</server>
-					<path>/</path>
 				</configuration>
 			</plugin>
+			
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-eclipse-plugin</artifactId>

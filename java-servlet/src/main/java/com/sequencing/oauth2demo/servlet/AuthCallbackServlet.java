@@ -1,46 +1,50 @@
 package com.sequencing.oauth2demo.servlet;
 
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
 
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.sequencing.oauth2demo.helper.HttpHelper;
-import com.sequencing.oauth2demo.helper.JsonHelper;
+import org.apache.log4j.Logger;
 
-public class AuthCallbackServlet extends BaseServlet {
+import com.sequencing.oauth.core.SequencingOAuth2Client;
 
-    public void doGet(HttpServletRequest request, 
-                      HttpServletResponse response) throws ServletException, IOException {
-        String state = (String) request.getParameter("state");
-        String code = (String) request.getParameter("code");     
+public class AuthCallbackServlet extends HttpServlet
+{
+	private static final long serialVersionUID = -4498242591685198756L;
+	private Logger logger = Logger.getLogger(getClass());
         
-        if (state.equals(getAppConfig().getState())) {
-            Map<String, String> params = new HashMap<String, String>();
-            params.put("grant_type", getAppConfig().getGrantType());
-            params.put("code", code);
-            params.put("redirect_uri", getAppConfig().getRedirectUri());
+	private SequencingOAuth2Client oauthClient;
             
-            Map<String, String> headers = HttpHelper.getBasicAuthenticationHeader(getAppConfig().getClientId(), 
-                                                                                  getAppConfig().getClientSecret());
+	@Override
+	public void init(ServletConfig config) throws ServletException
+	{
+		oauthClient = (SequencingOAuth2Client) config.getServletContext().getAttribute(
+				SequencingServletContextListener.CFG_OAUTH_HANDLER);
+	}
                       
-            String uri = getAppConfig().getOAuthTokenUri();
+	public void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException
+	{
+		String state = (String) request.getParameter("state");
+		String code = (String) request.getParameter("code");
             
-            String result = HttpHelper.doPost(uri, headers, params);
+		try
+		{
+			oauthClient.authorize(code, state);
+		}
+		catch (Exception e)
+		{
+			logger.warn("Error happened during authentication: " + e.getMessage(), e);
             
-            if (result == null) {
                 request.setAttribute("error", "An unsuccessful attempt to get the token");
                 request.getRequestDispatcher("/error").forward(request, response);
                 return;
             }
             
-            String accessToken = JsonHelper.getField(result, "access_token");
-            request.getSession().setAttribute("access_token", accessToken);
-            
             response.sendRedirect("/authorization-approved");
         }
     }
-}

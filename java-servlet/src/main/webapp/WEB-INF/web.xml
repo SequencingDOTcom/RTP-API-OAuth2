@@ -51,4 +51,8 @@
 		<url-pattern>/error</url-pattern>
 	</servlet-mapping>
 
+	<listener>
+		<listener-class>com.sequencing.oauth2demo.servlet.SequencingServletContextListener</listener-class>
+	</listener>
+
 </web-app>
