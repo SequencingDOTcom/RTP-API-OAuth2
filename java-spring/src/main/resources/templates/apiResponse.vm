@@ -36,12 +36,12 @@
             </tr></thead>
             <tbody>
             #foreach( $file in $response_json )
-	            #set( $name = $file.get("Name") )
-	            #set( $fd1 = $file.get("FriendlyDesc1") )
-	            #set( $fd2 = $file.get("FriendlyDesc2") )
-            	<tr><td>$name.asText(): #if($fd1 && $fd2) $fd1.asText(), $fd2.asText()
-            	                        #elseif($fd1) $fd1.asText()
-            	                        #elseif($fd2) $fd2.asText()
+	            #set( $name = $file.getAsJsonObject().get('Name') )
+	            #set( $fd1 = $file.getAsJsonObject().get('FriendlyDesc1') )
+	            #set( $fd2 = $file.getAsJsonObject().get('FriendlyDesc2') )
+            	<tr><td>$name.getAsString(): #if($fd1 && $fd2) $fd1.getAsString(), $fd2.getAsString()
+            	                        #elseif($fd1) $fd1.getAsString()
+            	                        #elseif($fd2) $fd2.getAsString()
             	                        #end</td></tr>
             #end
             </tbody>

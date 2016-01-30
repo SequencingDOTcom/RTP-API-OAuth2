@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.sequencing</groupId>
-	<artifactId>OAuthClient</artifactId>
+	<artifactId>OAuth2Demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>OAuthClient</name>
-	<description>Application that serve as a oAuth client</description>
+	<name>OAuth2Demo</name>
+	<description>Application that serve as a oAuth2 client</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -55,20 +55,14 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.apache.httpcomponents</groupId>
-			<artifactId>httpclient</artifactId>
-			<version>4.5.1</version>
-		</dependency>
-
-		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-log4j</artifactId>
 		</dependency>
 
 		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-core</artifactId>
-			<version>2.6.3</version>
+			<groupId>com.sequencing</groupId>
+			<artifactId>oauth2-core</artifactId>
+			<version>1.0</version>
 		</dependency>
 	</dependencies>
 
