@@ -4,7 +4,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.webkit.WebView;
 
-import com.sequencing.oauthdemo.config.ApplicationConfig;
 
 public class LoginSequencingActivity extends AppCompatActivity {
     private WebView myWebView;
@@ -14,10 +13,10 @@ public class LoginSequencingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sequencing_login);
 
+        OauthWebViewClient oauthWebViewClient = new OauthWebViewClient(this.getApplicationContext());
+
         myWebView = (WebView) findViewById(R.id.webView);
-        myWebView.setWebViewClient(new OauthWebViewClient(this.getApplicationContext()));
-        myWebView.loadUrl(ApplicationConfig.INSTANCE.getRedirectUri());
+        myWebView.setWebViewClient(oauthWebViewClient);
+        myWebView.loadUrl(oauthWebViewClient.getAppConfig().getRedirectUri());
     }
-
-
 }
