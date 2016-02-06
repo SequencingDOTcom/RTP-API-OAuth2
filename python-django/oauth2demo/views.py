@@ -1,37 +1,55 @@
 from django.shortcuts import render, redirect
 from django.core.urlresolvers import reverse
-from django.http import HttpResponse, HttpResponseRedirect
-import urllib.parse
-import requests
-from requests.auth import HTTPBasicAuth
+from django.http import HttpResponseRedirect
+import urllib
+
 from .appconfig import AppConfig
+import oauth
 
+oauth_client = None
+
+
+# We just being the oauth2 authorization loop. So we redirect the client to
+# Sequencing website and ask the user to allow our app to use his data.
 def auth(request):
-    params = urllib.parse.urlencode({'redirect_uri': AppConfig.redirect_uri, 'response_type': AppConfig.response_type, 'state': AppConfig.state, 'client_id': AppConfig.client_id, 'scope': AppConfig.scope})
+    global oauth_client
+    oauth_client = oauth.DefaultSequencingOAuth2Client(__getauth_parameters(AppConfig))
 
-    return redirect(AppConfig.oauthserver_uri + '/authorize?' + params, {})
+    auth_parameters = oauth_client.auth_parameters
+    params = urllib.urlencode({oauth_client.ATTR_REDIRECT_URL: auth_parameters.redirect_uri,
+                               oauth_client.ATTR_RESPONSE_TYPE: auth_parameters.response_type,
+                               oauth_client.ATTR_STATE: auth_parameters.state,
+                               oauth_client.ATTR_CLIENT_ID: auth_parameters.client_id,
+                               oauth_client.ATTR_SCOPE: auth_parameters.scope})
 
-def authCallback(request):
-    state = request.GET['state']
+    return redirect(auth_parameters.oauth_authorization_uri + '?%s' % params, {})
+
+
+# We came back from Sequencing website and if state argument matches with our
+# state, then we proceed and exchange the authorization code that we are
+# given in GET for the access token. The former will be used for
+# authorization, when we make requests to Sequencing API.
+def auth_callback(request):
     code = request.GET['code']
+    state = request.GET['state']
 
-    if state == AppConfig.state:
-        data = {'grant_type': AppConfig.grant_type, 'code': code, 'redirect_uri': AppConfig.redirect_uri}
-        response = requests.post(AppConfig.oauthserver_uri + '/token', auth=HTTPBasicAuth(AppConfig.client_id, AppConfig.client_secret), data=data) 
-        result = response.json();
-        request.session['access_token'] = result['access_token']
+    oauth_client.authorize(code, state)
         
         rurl = reverse('api')
         return HttpResponseRedirect(rurl) 
-    return HttpResponse('')
 
+
+# We make API requests, using access token.
 def api(request):
-    token = request.session['access_token']
-    if token is None:    
-        return HttpResponse('')
+    file_api = oauth.DefaultSequencingFileMetadataApi(oauth_client)
+
+    return render(request, 'apiResponse.html', {'response_json': file_api.getsample_files()})
     
-    uri = AppConfig.api_uri + '/DataSourceList?sample=true'
-    headers = { 'Authorization': 'Bearer {}'.format(token) }
-    response = requests.get(uri, headers=headers)
      
-    return render(request, 'apiResponse.html', {'response_json': response.json()})
+def __getauth_parameters(app_config):
+    parameters = oauth.AuthenticationParameters.ConfigurationBuilder()\
+                .with_redirect_uri(app_config.redirect_uri)\
+                .with_client_id(app_config.client_id)\
+                .with_client_secret(app_config.client_secret)\
+                .build()
+    return parameters
