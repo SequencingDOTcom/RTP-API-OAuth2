@@ -1,0 +1,401 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1C6E87851C60F755008F7C55 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C6E87841C60F755008F7C55 /* DetailsViewController.m */; };
+		1CA2D15A1C5FBC9500327DEE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA2D1591C5FBC9500327DEE /* main.m */; };
+		1CA2D15D1C5FBC9500327DEE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA2D15C1C5FBC9500327DEE /* AppDelegate.m */; };
+		1CA2D1601C5FBC9500327DEE /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA2D15F1C5FBC9500327DEE /* StartViewController.m */; };
+		1CA2D1631C5FBC9500327DEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CA2D1611C5FBC9500327DEE /* Main.storyboard */; };
+		1CA2D1651C5FBC9500327DEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CA2D1641C5FBC9500327DEE /* Assets.xcassets */; };
+		1CA2D1681C5FBC9500327DEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CA2D1661C5FBC9500327DEE /* LaunchScreen.storyboard */; };
+		1CA2D1711C5FCAFE00327DEE /* FilesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA2D1701C5FCAFE00327DEE /* FilesViewController.m */; };
+		1CA2D1741C5FD38200327DEE /* DemoDataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA2D1731C5FD38200327DEE /* DemoDataCell.m */; };
+		A1D7A29F1BD59616BE590458 /* libPods-demo-auth-objc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F8BD18C1D5F52EC970C0F6A9 /* libPods-demo-auth-objc.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1C6E87831C60F755008F7C55 /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
+		1C6E87841C60F755008F7C55 /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
+		1CA2D1551C5FBC9500327DEE /* demo-auth-objc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "demo-auth-objc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CA2D1591C5FBC9500327DEE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1CA2D15B1C5FBC9500327DEE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1CA2D15C1C5FBC9500327DEE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1CA2D15E1C5FBC9500327DEE /* StartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartViewController.h; sourceTree = "<group>"; };
+		1CA2D15F1C5FBC9500327DEE /* StartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
+		1CA2D1621C5FBC9500327DEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1CA2D1641C5FBC9500327DEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1CA2D1671C5FBC9500327DEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1CA2D1691C5FBC9500327DEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1CA2D16F1C5FCAFE00327DEE /* FilesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilesViewController.h; sourceTree = "<group>"; };
+		1CA2D1701C5FCAFE00327DEE /* FilesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilesViewController.m; sourceTree = "<group>"; };
+		1CA2D1721C5FD38200327DEE /* DemoDataCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoDataCell.h; sourceTree = "<group>"; };
+		1CA2D1731C5FD38200327DEE /* DemoDataCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoDataCell.m; sourceTree = "<group>"; };
+		55DBA4886C8645D28499682D /* Pods-demo-auth-objc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demo-auth-objc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-demo-auth-objc/Pods-demo-auth-objc.debug.xcconfig"; sourceTree = "<group>"; };
+		7E090228C5C4804F53CB4324 /* Pods-demo-auth-objc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demo-auth-objc.release.xcconfig"; path = "Pods/Target Support Files/Pods-demo-auth-objc/Pods-demo-auth-objc.release.xcconfig"; sourceTree = "<group>"; };
+		F8BD18C1D5F52EC970C0F6A9 /* libPods-demo-auth-objc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-demo-auth-objc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1CA2D1521C5FBC9500327DEE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1D7A29F1BD59616BE590458 /* libPods-demo-auth-objc.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1CA2D14C1C5FBC9500327DEE = {
+			isa = PBXGroup;
+			children = (
+				1CA2D1571C5FBC9500327DEE /* demo-auth-objc */,
+				1CA2D1561C5FBC9500327DEE /* Products */,
+				BC4069B24CC82E1986DE3F6C /* Pods */,
+				5C4A668C37FDBC8606C9E5A5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1CA2D1561C5FBC9500327DEE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1CA2D1551C5FBC9500327DEE /* demo-auth-objc.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1CA2D1571C5FBC9500327DEE /* demo-auth-objc */ = {
+			isa = PBXGroup;
+			children = (
+				1CA2D15B1C5FBC9500327DEE /* AppDelegate.h */,
+				1CA2D15C1C5FBC9500327DEE /* AppDelegate.m */,
+				1CA2D15E1C5FBC9500327DEE /* StartViewController.h */,
+				1CA2D15F1C5FBC9500327DEE /* StartViewController.m */,
+				1CA2D16F1C5FCAFE00327DEE /* FilesViewController.h */,
+				1CA2D1701C5FCAFE00327DEE /* FilesViewController.m */,
+				1C6E87831C60F755008F7C55 /* DetailsViewController.h */,
+				1C6E87841C60F755008F7C55 /* DetailsViewController.m */,
+				1CA2D1721C5FD38200327DEE /* DemoDataCell.h */,
+				1CA2D1731C5FD38200327DEE /* DemoDataCell.m */,
+				1CA2D1611C5FBC9500327DEE /* Main.storyboard */,
+				1CA2D1641C5FBC9500327DEE /* Assets.xcassets */,
+				1CA2D1661C5FBC9500327DEE /* LaunchScreen.storyboard */,
+				1CA2D1691C5FBC9500327DEE /* Info.plist */,
+				1CA2D1581C5FBC9500327DEE /* Supporting Files */,
+			);
+			path = "demo-auth-objc";
+			sourceTree = "<group>";
+		};
+		1CA2D1581C5FBC9500327DEE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1CA2D1591C5FBC9500327DEE /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5C4A668C37FDBC8606C9E5A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F8BD18C1D5F52EC970C0F6A9 /* libPods-demo-auth-objc.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BC4069B24CC82E1986DE3F6C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				55DBA4886C8645D28499682D /* Pods-demo-auth-objc.debug.xcconfig */,
+				7E090228C5C4804F53CB4324 /* Pods-demo-auth-objc.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1CA2D1541C5FBC9500327DEE /* demo-auth-objc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1CA2D16C1C5FBC9500327DEE /* Build configuration list for PBXNativeTarget "demo-auth-objc" */;
+			buildPhases = (
+				8A2D5AF80FBACA542F35C6D0 /* Check Pods Manifest.lock */,
+				1CA2D1511C5FBC9500327DEE /* Sources */,
+				1CA2D1521C5FBC9500327DEE /* Frameworks */,
+				1CA2D1531C5FBC9500327DEE /* Resources */,
+				0239F3755B53F1B19931C8E3 /* Embed Pods Frameworks */,
+				E34B3817439FA9610CD45F67 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "demo-auth-objc";
+			productName = "demo-auth-objc";
+			productReference = 1CA2D1551C5FBC9500327DEE /* demo-auth-objc.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1CA2D14D1C5FBC9500327DEE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Sequencing.com";
+				TargetAttributes = {
+					1CA2D1541C5FBC9500327DEE = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 1CA2D1501C5FBC9500327DEE /* Build configuration list for PBXProject "demo-auth-objc" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1CA2D14C1C5FBC9500327DEE;
+			productRefGroup = 1CA2D1561C5FBC9500327DEE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1CA2D1541C5FBC9500327DEE /* demo-auth-objc */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1CA2D1531C5FBC9500327DEE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CA2D1681C5FBC9500327DEE /* LaunchScreen.storyboard in Resources */,
+				1CA2D1651C5FBC9500327DEE /* Assets.xcassets in Resources */,
+				1CA2D1631C5FBC9500327DEE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0239F3755B53F1B19931C8E3 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-demo-auth-objc/Pods-demo-auth-objc-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8A2D5AF80FBACA542F35C6D0 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E34B3817439FA9610CD45F67 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-demo-auth-objc/Pods-demo-auth-objc-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1CA2D1511C5FBC9500327DEE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CA2D1601C5FBC9500327DEE /* StartViewController.m in Sources */,
+				1CA2D15D1C5FBC9500327DEE /* AppDelegate.m in Sources */,
+				1CA2D1711C5FCAFE00327DEE /* FilesViewController.m in Sources */,
+				1C6E87851C60F755008F7C55 /* DetailsViewController.m in Sources */,
+				1CA2D15A1C5FBC9500327DEE /* main.m in Sources */,
+				1CA2D1741C5FD38200327DEE /* DemoDataCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1CA2D1611C5FBC9500327DEE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1CA2D1621C5FBC9500327DEE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1CA2D1661C5FBC9500327DEE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1CA2D1671C5FBC9500327DEE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1CA2D16A1C5FBC9500327DEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1CA2D16B1C5FBC9500327DEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1CA2D16D1C5FBC9500327DEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55DBA4886C8645D28499682D /* Pods-demo-auth-objc.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "demo-auth-objc/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sequencing.demo-auth-objc";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1CA2D16E1C5FBC9500327DEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E090228C5C4804F53CB4324 /* Pods-demo-auth-objc.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "demo-auth-objc/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sequencing.demo-auth-objc";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1CA2D1501C5FBC9500327DEE /* Build configuration list for PBXProject "demo-auth-objc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CA2D16A1C5FBC9500327DEE /* Debug */,
+				1CA2D16B1C5FBC9500327DEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1CA2D16C1C5FBC9500327DEE /* Build configuration list for PBXNativeTarget "demo-auth-objc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CA2D16D1C5FBC9500327DEE /* Debug */,
+				1CA2D16E1C5FBC9500327DEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1CA2D14D1C5FBC9500327DEE /* Project object */;
+}
