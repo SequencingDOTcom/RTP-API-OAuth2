@@ -1,0 +1,6 @@
+framework module sequencing_oauth_api_swift {
+  umbrella header "sequencing-oauth-api-swift-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,10 @@
+PODS:
+  - sequencing-oauth-api-swift (1.0.1)
+
+DEPENDENCIES:
+  - sequencing-oauth-api-swift (~> 1.0)
+
+SPEC CHECKSUMS:
+  sequencing-oauth-api-swift: 319a4fa05298a3f4859e16febc95cfb6deed717c
+
+COCOAPODS: 0.39.0
