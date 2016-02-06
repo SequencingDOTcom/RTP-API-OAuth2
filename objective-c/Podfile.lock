@@ -1,0 +1,10 @@
+PODS:
+  - sequencing-oauth-api-objc (1.0.1)
+
+DEPENDENCIES:
+  - sequencing-oauth-api-objc (~> 1.0.1)
+
+SPEC CHECKSUMS:
+  sequencing-oauth-api-objc: cd43006730a4ca99e1a026b2f1bc8b6b92ec9b07
+
+COCOAPODS: 0.39.0

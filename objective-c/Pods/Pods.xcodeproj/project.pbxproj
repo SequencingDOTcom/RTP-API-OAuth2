@@ -1,0 +1,500 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1FF7814C6B94E252115371F97EA31E67 /* Pods-demo-auth-objc-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 29557DB3CA319E5C5B81AEA1CCA29814 /* Pods-demo-auth-objc-dummy.m */; };
+		246DFEB431D1C8067E571DDFAB653924 /* sequencing-oauth-api-objc-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D84A0CBCE6B6F10DCDD6FECF377B123 /* sequencing-oauth-api-objc-dummy.m */; };
+		26A37C44592B07B75F8CC435B25015F5 /* SQServerManager.h in Headers */ = {isa = PBXBuildFile; fileRef = EED9D6B08F97BB071D37001B17DF805B /* SQServerManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		41159F9ACF048D09A42BCFAF1687C993 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		474FEAED9DA336819BB36E38CB53F9B8 /* SQAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5E74B0C3AB485DA2AB61DD9FEEC13B /* SQAPI.m */; };
+		4D45E30B5665CCA847417144EFB8907E /* SQTokenUpdater.m in Sources */ = {isa = PBXBuildFile; fileRef = 1439AEC2E43641FBAEAE962F7320FFBB /* SQTokenUpdater.m */; };
+		4FDBF710881D5D861A9E9774536226F8 /* SQAuthResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A9857A96A93B30AD3B1E8B0218310BA /* SQAuthResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5B30C3EE6FACC3E6F2BD5FDBDF8243CC /* SQToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CA0AC4CE6BE508477F89D171C1AF148 /* SQToken.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		67974F3A0E576F12C8AA9920AE3EE245 /* SQHttpHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A65074D59802AC618E8B73ECAB16EF /* SQHttpHelper.m */; };
+		6A38F9797E51B096E2E96F2D696E9F2C /* SQRequestHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = F5DF9E7453A6B35DBE7C872695B366B0 /* SQRequestHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6F1504C8836B6F069C8B5AC8540199A5 /* SQRequestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A04A7FFB648CAC1D40C3EE4B19CF132D /* SQRequestHelper.m */; };
+		7CBF833C114702A5251DA7A0CD66D79B /* SQLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFA04B8F6FC7A12E5E511CDE0449BB2 /* SQLoginViewController.m */; };
+		91FF440764A5E9EE95F60043F923B6D4 /* SQLoginViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2834BF8A83B78E4FB1A2BE3CEA51FD26 /* SQLoginViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F2A92F83601EE1BF60BC9A5A7DD3D57 /* SQAuthResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 183DA46EEF7EA4ED3FA5D8479D9C4EAB /* SQAuthResult.m */; };
+		ADD8FE085A8558F3365434500E5867EB /* SQOAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B27E21E59AF785B0572BC0869A6E80 /* SQOAuth.m */; };
+		B30C8D9313052A53B6A23962E872E14A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		C6F8E3F0C3C458D3AE2577A4B7571C99 /* SQHttpHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 52F5FC46E0B7D360A9C650944D5107EF /* SQHttpHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D95105579B82C9CD9F96D00C37809E32 /* SQToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 677C760D97CCF3789B7FFBBDAF0B1DEC /* SQToken.m */; };
+		DE1E8EB0D5A671A197BCA69E29F50A76 /* SQAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 500B807727487283CAF8A671FB744CEF /* SQAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC0A54B2F178278A0C814615A73DD269 /* SQTokenUpdater.h in Headers */ = {isa = PBXBuildFile; fileRef = 529F6C39F6BF612F0CCCD8930819C972 /* SQTokenUpdater.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC420DF0BA790121E74FF162F5A19B85 /* SQOAuth.h in Headers */ = {isa = PBXBuildFile; fileRef = 22CDDA0A8F2347EAAE38763A9E4EAE32 /* SQOAuth.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F768FBCCB7A6611779264132195067ED /* SQServerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FF14DD09F9EE907BB55B0016F9767C41 /* SQServerManager.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3CDF938F0060D1216A1EC24BD52FE33C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E85E2A80A9B0EC996B27E8767EF1ACD;
+			remoteInfo = "sequencing-oauth-api-objc";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1439AEC2E43641FBAEAE962F7320FFBB /* SQTokenUpdater.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SQTokenUpdater.m; path = Pod/SQTokenUpdater.m; sourceTree = "<group>"; };
+		17B27E21E59AF785B0572BC0869A6E80 /* SQOAuth.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SQOAuth.m; path = Pod/SQOAuth.m; sourceTree = "<group>"; };
+		183DA46EEF7EA4ED3FA5D8479D9C4EAB /* SQAuthResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SQAuthResult.m; path = Pod/SQAuthResult.m; sourceTree = "<group>"; };
+		1C803ADBD30DF5B9EE1186FDC1AEEF46 /* Pods-demo-auth-objc-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-demo-auth-objc-frameworks.sh"; sourceTree = "<group>"; };
+		22CDDA0A8F2347EAAE38763A9E4EAE32 /* SQOAuth.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SQOAuth.h; path = Pod/SQOAuth.h; sourceTree = "<group>"; };
+		274FE2CC6357864C68690F721F8C58E5 /* Pods-demo-auth-objc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-demo-auth-objc.debug.xcconfig"; sourceTree = "<group>"; };
+		2834BF8A83B78E4FB1A2BE3CEA51FD26 /* SQLoginViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SQLoginViewController.h; path = Pod/SQLoginViewController.h; sourceTree = "<group>"; };
+		29557DB3CA319E5C5B81AEA1CCA29814 /* Pods-demo-auth-objc-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-demo-auth-objc-dummy.m"; sourceTree = "<group>"; };
+		2A9857A96A93B30AD3B1E8B0218310BA /* SQAuthResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SQAuthResult.h; path = Pod/SQAuthResult.h; sourceTree = "<group>"; };
+		33B0AD73569875DA12773A558CB59817 /* sequencing-oauth-api-objc-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "sequencing-oauth-api-objc-prefix.pch"; sourceTree = "<group>"; };
+		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		45C9DBE9855E3A78D219A4FF568F90FF /* sequencing-oauth-api-objc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "sequencing-oauth-api-objc.xcconfig"; sourceTree = "<group>"; };
+		500B807727487283CAF8A671FB744CEF /* SQAPI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SQAPI.h; path = Pod/SQAPI.h; sourceTree = "<group>"; };
+		529F6C39F6BF612F0CCCD8930819C972 /* SQTokenUpdater.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SQTokenUpdater.h; path = Pod/SQTokenUpdater.h; sourceTree = "<group>"; };
+		52F5FC46E0B7D360A9C650944D5107EF /* SQHttpHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SQHttpHelper.h; path = Pod/SQHttpHelper.h; sourceTree = "<group>"; };
+		5CA0AC4CE6BE508477F89D171C1AF148 /* SQToken.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SQToken.h; path = Pod/SQToken.h; sourceTree = "<group>"; };
+		5D84A0CBCE6B6F10DCDD6FECF377B123 /* sequencing-oauth-api-objc-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "sequencing-oauth-api-objc-dummy.m"; sourceTree = "<group>"; };
+		60F4547EAFB43932359C2E7980FD2019 /* Pods-demo-auth-objc-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-demo-auth-objc-acknowledgements.markdown"; sourceTree = "<group>"; };
+		677C760D97CCF3789B7FFBBDAF0B1DEC /* SQToken.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SQToken.m; path = Pod/SQToken.m; sourceTree = "<group>"; };
+		6B2B21652AE9D3D25E0F08F8C22B263B /* libsequencing-oauth-api-objc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libsequencing-oauth-api-objc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C85CB7C317AC1AC07772C7C7B634D24 /* libPods-demo-auth-objc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-demo-auth-objc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84023DC03A8BE8298D984A46C8EB4BE8 /* Pods-demo-auth-objc-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-demo-auth-objc-acknowledgements.plist"; sourceTree = "<group>"; };
+		94A65074D59802AC618E8B73ECAB16EF /* SQHttpHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SQHttpHelper.m; path = Pod/SQHttpHelper.m; sourceTree = "<group>"; };
+		A04A7FFB648CAC1D40C3EE4B19CF132D /* SQRequestHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SQRequestHelper.m; path = Pod/SQRequestHelper.m; sourceTree = "<group>"; };
+		A18C0E014D3109C07A9FF3AB37544CB6 /* Pods-demo-auth-objc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-demo-auth-objc.release.xcconfig"; sourceTree = "<group>"; };
+		AAFA04B8F6FC7A12E5E511CDE0449BB2 /* SQLoginViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SQLoginViewController.m; path = Pod/SQLoginViewController.m; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		CD5E74B0C3AB485DA2AB61DD9FEEC13B /* SQAPI.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SQAPI.m; path = Pod/SQAPI.m; sourceTree = "<group>"; };
+		EDA9FCF9FC3658034A65AC5F1D676ED7 /* Pods-demo-auth-objc-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-demo-auth-objc-resources.sh"; sourceTree = "<group>"; };
+		EED9D6B08F97BB071D37001B17DF805B /* SQServerManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SQServerManager.h; path = Pod/SQServerManager.h; sourceTree = "<group>"; };
+		F5DF9E7453A6B35DBE7C872695B366B0 /* SQRequestHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SQRequestHelper.h; path = Pod/SQRequestHelper.h; sourceTree = "<group>"; };
+		FF14DD09F9EE907BB55B0016F9767C41 /* SQServerManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SQServerManager.m; path = Pod/SQServerManager.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		680212FF552319C15B0F63226BC9FAC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B30C8D9313052A53B6A23962E872E14A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2EED8649F551499CF55FD3C7D3AD21C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41159F9ACF048D09A42BCFAF1687C993 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		059FCE83969079D96C4F6F49CEBBC8FF /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A0ACC00A0DBB6A4AF738183B02C4D592 /* Pods-demo-auth-objc */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		0624EDE96F086B639802DC1E5B310112 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7C85CB7C317AC1AC07772C7C7B634D24 /* libPods-demo-auth-objc.a */,
+				6B2B21652AE9D3D25E0F08F8C22B263B /* libsequencing-oauth-api-objc.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				9C7C42B1B479136D19874DC291571AA7 /* Pods */,
+				0624EDE96F086B639802DC1E5B310112 /* Products */,
+				059FCE83969079D96C4F6F49CEBBC8FF /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		9C7C42B1B479136D19874DC291571AA7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AB9884A0A0B2505AC302A7C05593A33C /* sequencing-oauth-api-objc */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A0ACC00A0DBB6A4AF738183B02C4D592 /* Pods-demo-auth-objc */ = {
+			isa = PBXGroup;
+			children = (
+				60F4547EAFB43932359C2E7980FD2019 /* Pods-demo-auth-objc-acknowledgements.markdown */,
+				84023DC03A8BE8298D984A46C8EB4BE8 /* Pods-demo-auth-objc-acknowledgements.plist */,
+				29557DB3CA319E5C5B81AEA1CCA29814 /* Pods-demo-auth-objc-dummy.m */,
+				1C803ADBD30DF5B9EE1186FDC1AEEF46 /* Pods-demo-auth-objc-frameworks.sh */,
+				EDA9FCF9FC3658034A65AC5F1D676ED7 /* Pods-demo-auth-objc-resources.sh */,
+				274FE2CC6357864C68690F721F8C58E5 /* Pods-demo-auth-objc.debug.xcconfig */,
+				A18C0E014D3109C07A9FF3AB37544CB6 /* Pods-demo-auth-objc.release.xcconfig */,
+			);
+			name = "Pods-demo-auth-objc";
+			path = "Target Support Files/Pods-demo-auth-objc";
+			sourceTree = "<group>";
+		};
+		AB9884A0A0B2505AC302A7C05593A33C /* sequencing-oauth-api-objc */ = {
+			isa = PBXGroup;
+			children = (
+				500B807727487283CAF8A671FB744CEF /* SQAPI.h */,
+				CD5E74B0C3AB485DA2AB61DD9FEEC13B /* SQAPI.m */,
+				2A9857A96A93B30AD3B1E8B0218310BA /* SQAuthResult.h */,
+				183DA46EEF7EA4ED3FA5D8479D9C4EAB /* SQAuthResult.m */,
+				52F5FC46E0B7D360A9C650944D5107EF /* SQHttpHelper.h */,
+				94A65074D59802AC618E8B73ECAB16EF /* SQHttpHelper.m */,
+				2834BF8A83B78E4FB1A2BE3CEA51FD26 /* SQLoginViewController.h */,
+				AAFA04B8F6FC7A12E5E511CDE0449BB2 /* SQLoginViewController.m */,
+				22CDDA0A8F2347EAAE38763A9E4EAE32 /* SQOAuth.h */,
+				17B27E21E59AF785B0572BC0869A6E80 /* SQOAuth.m */,
+				F5DF9E7453A6B35DBE7C872695B366B0 /* SQRequestHelper.h */,
+				A04A7FFB648CAC1D40C3EE4B19CF132D /* SQRequestHelper.m */,
+				EED9D6B08F97BB071D37001B17DF805B /* SQServerManager.h */,
+				FF14DD09F9EE907BB55B0016F9767C41 /* SQServerManager.m */,
+				5CA0AC4CE6BE508477F89D171C1AF148 /* SQToken.h */,
+				677C760D97CCF3789B7FFBBDAF0B1DEC /* SQToken.m */,
+				529F6C39F6BF612F0CCCD8930819C972 /* SQTokenUpdater.h */,
+				1439AEC2E43641FBAEAE962F7320FFBB /* SQTokenUpdater.m */,
+				D0A179C718BED08F601802834C26D1C7 /* Support Files */,
+			);
+			path = "sequencing-oauth-api-objc";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		D0A179C718BED08F601802834C26D1C7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				45C9DBE9855E3A78D219A4FF568F90FF /* sequencing-oauth-api-objc.xcconfig */,
+				5D84A0CBCE6B6F10DCDD6FECF377B123 /* sequencing-oauth-api-objc-dummy.m */,
+				33B0AD73569875DA12773A558CB59817 /* sequencing-oauth-api-objc-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/sequencing-oauth-api-objc";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		83D030DEDC20D00935A8863433BB044E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE1E8EB0D5A671A197BCA69E29F50A76 /* SQAPI.h in Headers */,
+				4FDBF710881D5D861A9E9774536226F8 /* SQAuthResult.h in Headers */,
+				C6F8E3F0C3C458D3AE2577A4B7571C99 /* SQHttpHelper.h in Headers */,
+				91FF440764A5E9EE95F60043F923B6D4 /* SQLoginViewController.h in Headers */,
+				EC420DF0BA790121E74FF162F5A19B85 /* SQOAuth.h in Headers */,
+				6A38F9797E51B096E2E96F2D696E9F2C /* SQRequestHelper.h in Headers */,
+				26A37C44592B07B75F8CC435B25015F5 /* SQServerManager.h in Headers */,
+				5B30C3EE6FACC3E6F2BD5FDBDF8243CC /* SQToken.h in Headers */,
+				EC0A54B2F178278A0C814615A73DD269 /* SQTokenUpdater.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3E85E2A80A9B0EC996B27E8767EF1ACD /* sequencing-oauth-api-objc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD83836D0439E41BEB2DD4512C6AAFFE /* Build configuration list for PBXNativeTarget "sequencing-oauth-api-objc" */;
+			buildPhases = (
+				066886597B7FAD78777A0A7119F8E140 /* Sources */,
+				680212FF552319C15B0F63226BC9FAC1 /* Frameworks */,
+				83D030DEDC20D00935A8863433BB044E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "sequencing-oauth-api-objc";
+			productName = "sequencing-oauth-api-objc";
+			productReference = 6B2B21652AE9D3D25E0F08F8C22B263B /* libsequencing-oauth-api-objc.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		E2CD3929EED83881B60EED5B6D5EB5FB /* Pods-demo-auth-objc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF7CBE2741A14B90C8621EF00A65C5E3 /* Build configuration list for PBXNativeTarget "Pods-demo-auth-objc" */;
+			buildPhases = (
+				9D664B01EAAED9A18FE7E69B9B7AA5D8 /* Sources */,
+				B2EED8649F551499CF55FD3C7D3AD21C /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				790D4B330DA5C7A8FE0D71A27D6A1857 /* PBXTargetDependency */,
+			);
+			name = "Pods-demo-auth-objc";
+			productName = "Pods-demo-auth-objc";
+			productReference = 7C85CB7C317AC1AC07772C7C7B634D24 /* libPods-demo-auth-objc.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 0624EDE96F086B639802DC1E5B310112 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E2CD3929EED83881B60EED5B6D5EB5FB /* Pods-demo-auth-objc */,
+				3E85E2A80A9B0EC996B27E8767EF1ACD /* sequencing-oauth-api-objc */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		066886597B7FAD78777A0A7119F8E140 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				246DFEB431D1C8067E571DDFAB653924 /* sequencing-oauth-api-objc-dummy.m in Sources */,
+				474FEAED9DA336819BB36E38CB53F9B8 /* SQAPI.m in Sources */,
+				9F2A92F83601EE1BF60BC9A5A7DD3D57 /* SQAuthResult.m in Sources */,
+				67974F3A0E576F12C8AA9920AE3EE245 /* SQHttpHelper.m in Sources */,
+				7CBF833C114702A5251DA7A0CD66D79B /* SQLoginViewController.m in Sources */,
+				ADD8FE085A8558F3365434500E5867EB /* SQOAuth.m in Sources */,
+				6F1504C8836B6F069C8B5AC8540199A5 /* SQRequestHelper.m in Sources */,
+				F768FBCCB7A6611779264132195067ED /* SQServerManager.m in Sources */,
+				D95105579B82C9CD9F96D00C37809E32 /* SQToken.m in Sources */,
+				4D45E30B5665CCA847417144EFB8907E /* SQTokenUpdater.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D664B01EAAED9A18FE7E69B9B7AA5D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FF7814C6B94E252115371F97EA31E67 /* Pods-demo-auth-objc-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		790D4B330DA5C7A8FE0D71A27D6A1857 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "sequencing-oauth-api-objc";
+			target = 3E85E2A80A9B0EC996B27E8767EF1ACD /* sequencing-oauth-api-objc */;
+			targetProxy = 3CDF938F0060D1216A1EC24BD52FE33C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		04F5EF1A93C4F69FF293EFA9FE90DA4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A18C0E014D3109C07A9FF3AB37544CB6 /* Pods-demo-auth-objc.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		05E30A4A843354E710E37860F58AE253 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 274FE2CC6357864C68690F721F8C58E5 /* Pods-demo-auth-objc.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		22A3E6685249D414EA29CFECA3B767DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45C9DBE9855E3A78D219A4FF568F90FF /* sequencing-oauth-api-objc.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/sequencing-oauth-api-objc/sequencing-oauth-api-objc-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		8D1534490D941DCA47C62AC4314182AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		9D07AF5EBEB2EF3BAF26313BED1B5311 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45C9DBE9855E3A78D219A4FF568F90FF /* sequencing-oauth-api-objc.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/sequencing-oauth-api-objc/sequencing-oauth-api-objc-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C5A18280E9321A9268D1C80B7DA43967 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D1534490D941DCA47C62AC4314182AF /* Debug */,
+				C5A18280E9321A9268D1C80B7DA43967 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF7CBE2741A14B90C8621EF00A65C5E3 /* Build configuration list for PBXNativeTarget "Pods-demo-auth-objc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05E30A4A843354E710E37860F58AE253 /* Debug */,
+				04F5EF1A93C4F69FF293EFA9FE90DA4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD83836D0439E41BEB2DD4512C6AAFFE /* Build configuration list for PBXNativeTarget "sequencing-oauth-api-objc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D07AF5EBEB2EF3BAF26313BED1B5311 /* Debug */,
+				22A3E6685249D414EA29CFECA3B767DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
