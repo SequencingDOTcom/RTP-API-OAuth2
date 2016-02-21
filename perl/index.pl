@@ -6,6 +6,7 @@ use HTTP::Request::Common;
 use LWP::UserAgent;
 use Data::Dumper;
 use HTML::Entities;
+use CGI::Session;
 use warnings;
 print qq(Content-type: text/html\n\n);
 
@@ -48,6 +49,9 @@ my $state = md5_hex('abc');
 # Sequencing API endpoint.
 my $api_uri = 'https://api.sequencing.com';
 
+# Our session
+my  $session = new CGI::Session();
+
 #subroutine for geting value by parameter from GET request
 sub get_value_of_parameter
 {
@@ -70,6 +74,84 @@ sub get_value_of_parameter
    {
 	return;
    }
+}
+
+# Return access token
+sub get_token
+{
+	  if (!defined $session->param('access_token')) 
+	  {
+	          my $ua = LWP::UserAgent->new;
+        	  $ua->agent("$0/0.1 " . $ua->agent);
+	          my $post_req = POST ($oauth2_token_uri,
+        	          [
+                	          grant_type => 'authorization_code',
+                        	  code => @_[0],
+	                          redirect_uri => $redirect_uri
+        	          ]);
+	          $post_req->authorization_basic($client_id, $client_secret);
+	          my $response = $ua->request($post_req);
+        	  # print $response->decoded_content; 
+		  
+		  my $json = JSON->new->utf8->allow_nonref;
+	          my $response_parsed = $json->decode($response->content());
+        	  unless (defined $response_parsed)
+	          {
+        	       print 'Error in oauth2 token response: ' . $response;
+             	       exit;
+	          }
+
+       	          # You are to save these 2 tokens somewhere in a permanent storage, such as
+        	  # database. When access token expires, you will be able to use refresh
+         	  # token to fetch a new access token without need of re-authorization by
+          	  # user.
+		  
+		  my $access_token = $response_parsed->{'access_token'};
+	          my $refresh_token = $response_parsed->{'refresh_token'};
+	
+		  $session->param('last_refresh',  time());		  
+		  $session->param('access_token',  $access_token);
+		  $session->param('refresh_token', $refresh_token);
+		
+		  return $access_token;
+	  }
+ 	  # We refresh token every 50 minutes
+	  elsif($session->param('last_refresh') + 50*60 < time() )
+	  {	
+	  	return refresh_token();
+	  }
+
+	  else
+	  {
+		return $session->param('access_token');
+	  }
+}
+
+# Subroutine for refreshing token
+sub refresh_token
+{
+          my $ua = LWP::UserAgent->new;
+          $ua->agent("$0/0.1 " . $ua->agent);
+          my $post_req = POST ($oauth2_token_uri,
+                  [
+                          grant_type => 'refresh_token',
+                          refresh_token => $refresh_token
+                  ]);
+          $post_req->authorization_basic($client_id, $client_secret);
+          my $response = $ua->request($post_req);
+
+          my $response_parsed = $json->decode($response->content());
+          unless (defined $response_parsed)
+          {
+               print 'Error in oauth2 token response: ' . $response;
+               exit;
+          }
+
+          $access_token = $response_parsed->{'access_token'};
+	  $session->param('last_refresh',  time());
+	  $session->param('access_token',  $access_token);
+	
+	  return $access_token; 
 }
 
 if (!defined get_value_of_parameter('code'))
@@ -98,36 +180,12 @@ else
      if(get_value_of_parameter('state') eq $state)
      {
 	  my $code = get_value_of_parameter('code');
-	  my $json = JSON->new->utf8->allow_nonref;
-	  my $ua = LWP::UserAgent->new;
-	  $ua->agent("$0/0.1 " . $ua->agent);
-	  my $post_req = POST ($oauth2_token_uri, 
-		  [
-                          grant_type => 'authorization_code',
-			  code => $code,
-			  redirect_uri => $redirect_uri
-                  ]);
-	  $post_req->authorization_basic($client_id, $client_secret);
-	  my $response = $ua->request($post_req);
-	  # print $response->decoded_content; 
 	  
-	  my $response_parsed = $json->decode($response->content());
-	  unless (defined $response_parsed)
-	  {
-	       print 'Error in oauth2 token response: ' . $response;
-	       exit;
-	  }
-
-	  # You are to save these 2 tokens somewhere in a permanent storage, such as
-	  # database. When access token expires, you will be able to use refresh
-	  # token to fetch a new access token without need of re-authorization by
-	  # user.
-	  my $access_token = $response_parsed->{'access_token'};
-	  my $refresh_token = $response_parsed->{'refresh_token'};
+	  my $access_token = get_token($code);
 
 	  my $browser = LWP::UserAgent->new; 
 	  my $second_response = $browser->get($api_uri.'/DataSourceList?sample=true', Authorization => 'Bearer '.$access_token);
-	  # print $second_response->decoded_content; 
+	  my $json = JSON->new->utf8->allow_nonref;
 	  our @response_json = @{$json->decode($second_response->content())};
 	  
 	  unless (defined @response_json)
