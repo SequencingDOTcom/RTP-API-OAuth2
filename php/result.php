@@ -18,7 +18,7 @@
 </head>
 <body>
 <div class="container">
-    <div class="row"><div class="col-xs-12"><a href="/"><img src="https://oauth-demo.sequencing.com/images/logo.png" alt="Sequencing.com" /></a></div></div>
+    <div class="row"><div class="col-xs-12"><a href="/"></a></div></div>
     <div class="row"><div class="col-xs-12"><h1 class="page-title">Thank you for using Sequencing.com's oAuth2 demo.</h1></div></div>
     <div class="row"><div class="col-xs-12">
         <p>If you see a list of file names below then the oAuth2 demo has completed successfully.</p>

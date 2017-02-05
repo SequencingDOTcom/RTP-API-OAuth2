@@ -136,7 +136,7 @@ else {
       exit('Unexpected return from the Sequencing API: ' . $response);
     }
 
-    require 'result.php';
+    require dirname(__FILE__) . '/result.php';
   }
   else {
     exit('State argument mismatch.');
