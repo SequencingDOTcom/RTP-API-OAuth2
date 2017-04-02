@@ -30,6 +30,7 @@ public class ApiController {
 		String result = null;
 		try {
 			result = fileApi.getSampleFiles();
+
 		} catch (NonAuthorizedException e) {
 			logger.warn("App does not contain access token", e);
 			e.printStackTrace();
