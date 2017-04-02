@@ -1,38 +1,58 @@
 package com.sequencing.oauth2demo;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class ApplicationConfiguration
 {
-	private String redirectUri;
+	@Value("${redirectMapping}")
+	private String redirectMapping;
+
+    @Value("${redirectHost}")
+    private String redirectHost;
+
+    @Value("${clientId}")
 	private String clientId;
+
+    @Value("${clientSecret}")
 	private String clientSecret;
-	
-	public String getRedirectUri()
+
+	public String getRedirectMapping()
 	{
-		return redirectUri;
+		return redirectMapping;
 	}
-	public void setRedirectUri(String redirectUri)
+
+    public void setRedirectMapping(String redirectMapping)
 	{
-		this.redirectUri = redirectUri;
+		this.redirectMapping = redirectMapping;
 	}
-	public String getClientId()
+
+    public String getClientId()
 	{
 		return clientId;
 	}
-	public void setClientId(String clientId)
+
+    public void setClientId(String clientId)
 	{
 		this.clientId = clientId;
 	}
-	public String getClientSecret()
+
+    public String getClientSecret()
 	{
 		return clientSecret;
 	}
-	public void setClientSecret(String clientSecret)
+
+    public void setClientSecret(String clientSecret)
 	{
 		this.clientSecret = clientSecret;
 	}
-	
-	
+
+    public String getRedirectHost() {
+        return redirectHost;
+    }
+
+    public void setRedirectHost(String redirectHost) {
+        this.redirectHost = redirectHost;
+    }
 }

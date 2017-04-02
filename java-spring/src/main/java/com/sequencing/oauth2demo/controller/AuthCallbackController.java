@@ -1,7 +1,9 @@
 package com.sequencing.oauth2demo.controller;
 
+import com.sequencing.oauth.core.Token;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -22,14 +24,15 @@ public class AuthCallbackController
 	@Autowired
 	private SequencingOAuth2Client oauth;
 	
-	private Logger logger = Logger.getLogger(getClass());;
+	private Logger logger = Logger.getLogger(getClass());
 
-	@RequestMapping(value = "/Default/Authcallback", method = RequestMethod.GET, params = { "state", "code" })
+	@RequestMapping(value = "${redirectMapping}", method = RequestMethod.GET, params = { "state", "code" })
 	public ModelAndView authCallbackResponse(@RequestParam("state") String state, @RequestParam("code") String code) {
 		ModelAndView mav = new ModelAndView();
 
 		try {
-			oauth.authorize(code, state);
+			Token token  = oauth.authorize(code, state);
+			logger.info("Authentication tokens: access token : " + token.getAccessToken() + ", refresh token: " + token.getRefreshToken());
 		} catch (Exception e) {
 			logger.warn("An unsuccessful attempt to get the token", e);
 			mav.addObject("error", "An unsuccessful attempt to get the token");

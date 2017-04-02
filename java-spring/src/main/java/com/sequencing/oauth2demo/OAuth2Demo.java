@@ -5,6 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 import com.sequencing.oauth.config.AuthenticationParameters;
@@ -16,6 +17,7 @@ import com.sequencing.oauth.core.SequencingOAuth2Client;
 @Configuration
 @EnableWebMvc
 @SpringBootApplication
+@PropertySource(value = "application.properties")
 public class OAuth2Demo
 {
     public static void main(String[] args) {
@@ -27,9 +29,10 @@ public class OAuth2Demo
     public AuthenticationParameters getParameters(ApplicationConfiguration config)
     {
     	return new AuthenticationParameters.ConfigurationBuilder()
-    			.withRedirectUri(config.getRedirectUri())
+    			.withRedirectUri(config.getRedirectHost() + config.getRedirectMapping())
     			.withClientId(config.getClientId())
     			.withClientSecret(config.getClientSecret())
+                .withScope("external|demo")
 				.build();
     }
     
