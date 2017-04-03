@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\omazurova\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpclient-android\4.3.5.1\eecbb0b998e77629862a13d957d552b3be58fc4e\httpclient-android-4.3.5.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="eecbb0b998e77629862a13d957d552b3be58fc4e">
+        <dex dex="D:\projects\Sequencing\TestSQApi\app\build\intermediates\pre-dexed\debug\httpclient-android-4.3.5.1_d95a772995f7c3f2802cf01e4af8cd0c80c42a24.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\omazurova\.gradle\caches\modules-2\files-2.1\org.slf4j\slf4j-api\1.7.12\8e20852d05222dc286bf1c71d78d0531e177c317\slf4j-api-1.7.12.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8e20852d05222dc286bf1c71d78d0531e177c317">
+        <dex dex="D:\projects\Sequencing\TestSQApi\app\build\intermediates\pre-dexed\debug\slf4j-api-1.7.12_64250b5536435ed25348c526fcce2c81eaa3299b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\omazurova\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.1.1\support-annotations-25.1.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b59b6ee8d6ecc03e672d253800430343493a6ed8">
+        <dex dex="D:\projects\Sequencing\TestSQApi\app\build\intermediates\pre-dexed\debug\support-annotations-25.1.1_571fba560572e37db976968ad1069f9350260a15.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\projects\Sequencing\TestSQApi\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7bde4c34162092e0a77e7f12dc85ed77c484cf5c">
+        <dex dex="D:\projects\Sequencing\TestSQApi\app\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-25.1.1_6fc30b9646262327e6bd2725c451a2b7f5dc81c8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\projects\Sequencing\TestSQApi\app\libs\org.apache.http.legacy.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="017030d11901291abf8f83a812984276b643ea0f">
+        <dex dex="D:\projects\Sequencing\TestSQApi\app\build\intermediates\pre-dexed\debug\org.apache.http.legacy_57f63ef8c927fe85e64cfae316acc98676c5ad83.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\projects\Sequencing\TestSQApi\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e2719c102dca3a7a5b02ce07f769362da6ddb4ab">
+        <dex dex="D:\projects\Sequencing\TestSQApi\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-25.1.1_f9ee893b59ad5bc304811c21677494af1adb48e5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\projects\Sequencing\TestSQApi\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0fb891e8f0cfba0513043a7bb357513d229ca2cd">
+        <dex dex="D:\projects\Sequencing\TestSQApi\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-25.1.1_85f37444fe1fd7259aab4da30a537b4938099d0d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\projects\Sequencing\TestSQApi\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c03bf57f358aa10d253f21989e93bcf6014b3b17">
+        <dex dex="D:\projects\Sequencing\TestSQApi\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-25.1.1_3bc6acd00cc2de54715dddc2c0e94da870f38488.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\projects\Sequencing\TestSQApi\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3e04ac8ca644ea7baddf6fdcf72e15c79e9df94a">
+        <dex dex="D:\projects\Sequencing\TestSQApi\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-25.1.1_bd861e4043d48637ab83490d509240286ad37385.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\projects\Sequencing\TestSQApi\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ecb496cc08dd52551fc5ec6db3bc0632e95a89bb">
+        <dex dex="D:\projects\Sequencing\TestSQApi\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-25.1.1_02ce512b898fbed3557a6d55c7800ee0d8655afd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\omazurova\.gradle\caches\modules-2\files-2.1\com.sequencing\oauth2-core\1.7\4c9de427d2a1e043d284219286f9beef98929d19\oauth2-core-1.7.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4c9de427d2a1e043d284219286f9beef98929d19">
+        <dex dex="D:\projects\Sequencing\TestSQApi\app\build\intermediates\pre-dexed\debug\oauth2-core-1.7_996c42eb55d1263ab4b02ef343d3e1571c0a3e7a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\projects\Sequencing\TestSQApi\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="02741d05d4b697fba5e279e9881aaa1da0ca7c7f">
+        <dex dex="D:\projects\Sequencing\TestSQApi\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-25.1.1_368fe21889bed0df0e5be11b892afe97fb92e2fc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\projects\Sequencing\TestSQApi\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0d191c1a09e4892d059e5ce749e4ad4e08129e35">
+        <dex dex="D:\projects\Sequencing\TestSQApi\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-25.1.1_664ce9f1f6817b329f625b94bdad407dbbc6b030.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\omazurova\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.5\686c608d1805b6d4d425ec4459e88164ffc85870\gson-2.5.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="686c608d1805b6d4d425ec4459e88164ffc85870">
+        <dex dex="D:\projects\Sequencing\TestSQApi\app\build\intermediates\pre-dexed\debug\gson-2.5_116c667f13cafa2997a51b08022d0e710a268cb0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\projects\Sequencing\TestSQApi\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="D:\projects\Sequencing\TestSQApi\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-25.1.1_eee50ee4fe3e9a9c8a5245c5b6d831e74e4456ed.jar" />
+    </item>
+
+</items>
