@@ -99,8 +99,34 @@ else {
     // user. For demonstration purposes we will use refresh token to get a new
     // access token in the following lines of code. This is not necessary and
     // should be used when access token you have on hands has expired.
-    $access_token = $response_parsed->access_token;
-    $refresh_token = $response_parsed->refresh_token;
+    $_SESSION["_seq_access_token"] = $response_parsed->access_token;
+    $_SESSION["_seq_refresh_token"] = $response_parsed->refresh_token;
+    $_SESSION["_seq_token_ttl"] = $response_parsed->expires_in;
+    $_SESSION["_seq_last_refreshed_token_timestamp"] = date_timestamp_get( date_create() );
+
+    $response_json = getFilesMetadata();
+    require dirname(__FILE__) . '/result.php';
+  }
+  else {
+    exit('State argument mismatch.');
+  }
+}
+
+function getToken() {
+    $access_token = $_SESSION["_seq_access_token"];
+    if( ! isset($access_token) ) {
+        exit('Non-authorized user');
+    }
+
+    if( date_timestamp_get( date_create() ) >= (($_SESSION["_seq_last_refreshed_token_timestamp"] + $_SESSION["_seq_token_ttl"] * 1000) - 30000) ) {
+	$access_token = refreshToken($_SESSION["_seq_refresh_token"]);
+    }
+
+    return $access_token;
+}
+
+function refreshToken($refresh_token) {
+    global $oauth2_token_uri, $client_id, $client_secret;
 
     $ch = curl_init();
     curl_setopt_array($ch, array(
@@ -119,14 +145,19 @@ else {
     if (!$response_parsed || isset($response_parsed->error)) {
       exit('Error in oauth2 token refresh response: ' . $response);
     }
-    $access_token = $response_parsed->access_token;
+
+    return $response_parsed->access_token;
+}
+
+function getFilesMetadata() {
+    global $api_uri;
 
     $ch = curl_init();
     curl_setopt_array($ch, array(
       CURLOPT_URL => $api_uri . '/DataSourceList?sample=true',
       CURLOPT_RETURNTRANSFER => TRUE,
       CURLOPT_HTTPHEADER => array(
-        'Authorization: Bearer ' . $access_token,
+        'Authorization: Bearer ' . getToken(),
       ),
     ));
     $response = curl_exec($ch);
@@ -136,9 +167,6 @@ else {
       exit('Unexpected return from the Sequencing API: ' . $response);
     }
 
-    require dirname(__FILE__) . '/result.php';
-  }
-  else {
-    exit('State argument mismatch.');
-  }
+    return $response_json;
 }
+?>
