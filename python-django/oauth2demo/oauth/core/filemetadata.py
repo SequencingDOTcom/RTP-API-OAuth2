@@ -19,4 +19,4 @@ class DefaultSequencingFileMetadataApi(object):
             raise NonAuthorizedException()
 
         uri = '%s/DataSourceList?%s=true&shared=true' % (self._oauth_client.auth_parameters.api_uri, file_type)
-        return do_oauth_secure_get(uri, self._oauth_client.token)
+        return do_oauth_secure_get(uri, self._oauth_client.get_token())
