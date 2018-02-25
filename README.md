@@ -47,7 +47,7 @@ To implement oAuth2 authentication for your app:
 
 2) Add [Sequencing.com's oAuth2 code](https://github.com/SequencingDOTcom/oAuth2-code-and-demo) from this repo to your app
 
-3) [Generate an OAuth2 secret](https://sequencing.com/api-secret-generator) and insert the secret into the OAuth2 code
+3) [Generate an oAuth2 secret for your app by selecting a +RTP API Plan](https://sequencing.com/plan) and insert the secret into the OAuth2 code
 
 Once OAuth2 authentication is implemented, select one or more [app chains](https://sequencing.com/app-chains) that will provide information you can use to personalize your app.
 
