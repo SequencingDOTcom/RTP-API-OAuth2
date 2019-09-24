@@ -34,9 +34,8 @@ def auth_callback(request):
     state = request.GET['state']
 
     oauth_client.authorize(code, state)
-        
-        rurl = reverse('api')
-        return HttpResponseRedirect(rurl) 
+    rurl = reverse('api')
+    return HttpResponseRedirect(rurl)
 
 
 # We make API requests, using access token.

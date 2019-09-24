@@ -1,7 +1,5 @@
 import urllib
-import sched
 import time
-from threading import Thread
 
 from token import Token
 from ..utils.http import do_basic_secure_post
@@ -42,7 +40,6 @@ class DefaultSequencingOAuth2Client(object):
     def __init__(self, auth_parameters):
         self.auth_parameters = auth_parameters
         self.token = None
-        self._token_refresher = None
 
     def http_redirect_parameters(self):
         attributes = {
@@ -74,12 +71,9 @@ class DefaultSequencingOAuth2Client(object):
 
         access_token = result[self.ATTR_ACCESS_TOKEN]
         refresh_token = result[self.ATTR_REFRESH_TOKEN]
-        timelife = int(result[self.ATTR_EXPIRES_IN])
+        lifetime =  time.time() + int(result[self.ATTR_EXPIRES_IN])
 
-        self.token = Token(access_token, refresh_token, timelife)
-
-        self._token_refresher = self.__TokenRefresher(self, timelife - 60)
-        self._token_refresher.start()
+        self.token = Token(access_token, refresh_token, lifetime)
 
         return self.token
 
@@ -100,21 +94,11 @@ class DefaultSequencingOAuth2Client(object):
 
         access_token = result[self.ATTR_ACCESS_TOKEN]
         refresh_token = self.token.refresh_token
-        timelife = result[self.ATTR_EXPIRES_IN]
+        lifetime = time.time() + int(result[self.ATTR_EXPIRES_IN])
 
-        self.token = Token(access_token, refresh_token, timelife)
+        self.token = Token(access_token, refresh_token, lifetime)
 
-    class __TokenRefresher(Thread):
-        def __init__(self, outer, frequency):
-            Thread.__init__(self)
-            self.outer = outer
-            self.frequency = frequency
-            self.scheduler = sched.scheduler(time.time, time.sleep)
-
-        def run(self):
-            self.scheduler.enter(self.frequency, 1, self.__run_refresh_token, ())
-            self.scheduler.run()
-
-        def __run_refresh_token(self):
-            self.outer._refresh_token()
-            self.scheduler.enter(self.frequency, 1, self.__run_refresh_token, ())
+    def get_token(self):
+        if self.token.lifetime < time.time():
+            self._refresh_token()
+        return self.token
